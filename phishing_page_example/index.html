@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Training Only – Phishing Simulation (Dummy Page)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Keep this page out of search results -->
+  <meta name="robots" content="noindex,nofollow" />
+  <!-- Minimize referrer leakage on outbound clicks -->
+  <meta name="referrer" content="no-referrer" />
+  <!-- Very restrictive CSP (meta delivery works for most modern browsers).
+       Prevents scripts, network calls, and any form submission. -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none'; style-src 'unsafe-inline'; img-src 'self' data:; connect-src 'none'; frame-src 'none'; form-action 'none'; base-uri 'none'">
+  <style>
+    :root { --bg:#0b1020; --card:#121731; --text:#e7ecff; --muted:#9aa3c7; --warn:#ffcc00; --bad:#ff6b6b; }
+    html,body{height:100%} body{margin:0; background:var(--bg); color:var(--text); font:16px/1.5 system-ui,Segoe UI,Roboto,Inter,Arial}
+    .wrap{max-width:880px; margin:6vh auto; padding:24px}
+    .banner{display:flex; gap:12px; align-items:flex-start; background:#1a2142; border:1px solid #2a3260; border-radius:14px; padding:18px 20px}
+    .banner b{color:var(--warn)}
+    .card{margin-top:18px; background:var(--card); border:1px solid #2a3260; border-radius:14px; padding:22px}
+    .grid{display:grid; gap:14px}
+    .login{max-width:420px}
+    label{display:block; font-weight:600; margin-bottom:6px}
+    input{width:100%; border-radius:10px; padding:12px; border:1px solid #3a4475; background:#0f1430; color:var(--text)}
+    input[disabled]{opacity:.65; cursor:not-allowed}
+    .btn{width:100%; padding:12px 14px; border-radius:10px; border:0; background:#2b63ff; color:#fff; font-weight:700}
+    .btn[disabled]{opacity:.5; background:#3b4d8a; cursor:not-allowed}
+    .bad{color:var(--bad); font-weight:700}
+    code,pre{background:#0f1430; border:1px solid #2a3260; border-radius:10px; padding:10px}
+    a{color:#9bc1ff}
+    .footer{opacity:.8; margin-top:20px; font-size:.92rem; color:var(--muted)}
+  </style>
+</head>
+<body>
+  <!--
+    DUMMY TRAINING PAGE.
+    This page intentionally does NOT collect any data.
+    Use only in controlled awareness/testing scenarios on assets you own.
+  -->
+  <div class="wrap">
+    <div class="banner">
+      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 1.5l9 16.5H3L12 1.5zM12 9v4" stroke="#ffcc00" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="12" cy="16.5" r="1.2" fill="#ffcc00"/>
+      </svg>
+      <div>
+        <h1 style="margin:0">Training Only — Phishing Simulation (Dummy)</h1>
+        <p style="margin:.4rem 0 0">
+          <b>Do not enter any information.</b> If you reached this page during a test, it <i>simulates</i> a phishing landing
+          to teach common red flags. This page is safe: forms and scripts are disabled.
+        </p>
+      </div>
+    </div>
+
+    <div class="card grid">
+      <h2 style="margin:.2rem 0">Example of a “fake login” (disabled)</h2>
+      <p class="footer">This section mimics how a malicious page might look — but the controls are disabled and no data leaves your browser.</p>
+
+      <form class="login" aria-disabled="true">
+        <label for="email">Work email</label>
+        <input id="email" type="email" placeholder="you@example.com" disabled>
+
+        <label for="pwd" style="margin-top:10px">Password</label>
+        <input id="pwd" type="password" placeholder="••••••••" disabled>
+
+        <p class="footer">
+          <span class="bad">Important:</span> Buttons are disabled and <code>form-action 'none'</code> in CSP blocks submission.
+        </p>
+        <button class="btn" type="button" disabled aria-disabled="true">Sign in (disabled)</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2 style="margin:.2rem 0">Common phishing red flags shown here</h2>
+      <ul>
+        <li><b>Mismatched URL</b> (domain doesn’t match the brand)</li>
+        <li><b>Urgency</b> (“immediate action required”)</li>
+        <li><b>Shortened links</b> that obscure the destination (don’t click unknown short links)</li>
+        <li><b>Requests for passwords or MFA codes</b> via webforms or email</li>
+      </ul>
+      <p class="footer">
+        Learn more about phishing awareness and simulations from CISA and SANS. :contentReference[oaicite:2]{index=2}
+      </p>
+    </div>
+
+    <div class="card">
+      <h2 style="margin:.2rem 0">What to do if this were real</h2>
+      <ol>
+        <li>Close the tab. Do not enter credentials.</li>
+        <li>Report the message/link to your security team.</li>
+        <li>If you entered info by mistake, change your password and report it immediately.</li>
+      </ol>
+      <p class="footer">
+        (Optional) Report this simulation:
+        <a href="mailto:security@example.com?subject=Phishing%20Simulation%20Report"
+           rel="noopener noreferrer">security@example.com</a>
+      </p>
+    </div>
+
+    <p class="footer">
+      This page sets <code>noindex,nofollow</code> to avoid appearing in search results,
+      and a restrictive <code>Content-Security-Policy</code> delivered via meta to block scripts and form submissions. :contentReference[oaicite:3]{index=3}
+    </p>
+  </div>
+</body>
+</html>
