@@ -18,7 +18,7 @@ good-faith reports through the applicable **Vulnerability Reward Program (VRP)**
 
 **Safe use and privacy.** These pages themselves do not collect personal data beyond normal static-hosting logs (e.g., GitHub Pages/CDN). Your interactions with third-party products (e.g., Gemini) are governed by those products’ terms and privacy policies.
 
-**Takedown / contact.** If you believe this content creates an undue risk, or you need a page removed, please open a private issue or contact: **[your-email@example.com]**.
+**Takedown / contact.** If you believe this content creates an undue risk, or you need a page removed, please open a private issue or contact: **[nikolajankovickv@gmail.com]**.
 
 **License.** Page templates are provided under the MIT License. This does **not** grant permission to use them for unlawful activity or to publish harmful payloads.
 
